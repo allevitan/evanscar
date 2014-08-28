@@ -13,14 +13,14 @@ ul {
 }
 
 .spot {
-    width: 350px;
+    width: 380px;
     margin:10px;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     background-color: #999999;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .spot:hover {

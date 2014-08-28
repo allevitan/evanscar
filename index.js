@@ -28,8 +28,8 @@ mongo.Db.connect(mongoURI, function(err, db){
 	io.on('connection', function(socket){
 	    console.log('A user connected');
 	    socket.on('update', function(id){
+		io.emit('update', id);
 		loc.update({name: 'car'}, {name: 'car', loc: id}, {upsert: true}, function(){
-		    io.emit('update', id);
 		    console.log('location updated to ' + id);
 		});
 	    });
