@@ -1,0 +1,29 @@
+doctype
+html
+  head
+    title Where's Evan's Car?
+    link(rel='stylesheet', href='/static/style.css')
+    script(type='text/javascript',src='https://cdn.socket.io/socket.io-1.0.6.js')
+    script(type='text/javascript',src='/static/doit.js')
+  body
+    ul
+      if loc == 'A'
+        li(class='spot active',id='A') Lot A
+      else
+        li(class='spot',id='A') Lot A
+      if loc == 'B'
+        li(class='spot active',id='B') Lot B
+      else
+        li(class='spot',id='B') Lot B
+      if loc == 'B+'
+        li(class='spot active',id='B+') Lot B+
+      else
+        li(class='spot',id='B+') Lot B+
+      if loc == 'C'
+        li(class='spot active',id='C') Lot C
+      else
+        li(class='spot',id='C') Lot C
+      if loc == 'R'
+        li(class='spot active',id='R') On the Road
+      else
+        li(class='spot',id='R') On the Road
