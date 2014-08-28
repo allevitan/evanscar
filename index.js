@@ -15,7 +15,7 @@ app.use('/static', express.static(__dirname + '/static'));
 app.get('/', function(req, res) {
     console.log('Incoming connection');
     mongo.Db.connect(mongoURI, function(err, db){
-	console.log(db);
+	console.log(err);
 	db.collection('loc', function(er, loc){
 	    loc.findOne({name: 'car'}, function(err, car){
 		res.render('layout', {loc: car.loc});
